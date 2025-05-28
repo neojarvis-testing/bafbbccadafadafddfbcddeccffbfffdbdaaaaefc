@@ -1,10 +1,12 @@
-package main.java.com.examly.DTO;
+package main.java.com.examly.model;
 
 @Entity
 public class Turf {
 
     @Id 
     @GeneratedValue(strategy=GeneratedValue.Identity)
+
+    @Column(name = "turf_Id")
     int turfId;
     String name;
     String location;

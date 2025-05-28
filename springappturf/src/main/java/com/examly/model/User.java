@@ -1,8 +1,8 @@
-package main.java.com.examly.DTO;
+package main.java.com.examly.model;
 
 import java.lang.annotation.Inherited;
 
-@entity
+@Entity
 public class User {
 
     @Id 
