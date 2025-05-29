@@ -1,6 +1,12 @@
-package main.java.com.examly.model;
+package com.examly.model;
 
 import java.time.LocalDate;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Feedback {

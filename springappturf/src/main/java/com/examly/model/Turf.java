@@ -1,6 +1,9 @@
-package main.java.com.examly.model;
+package com.examly.model;
+
+import jakarta.persistence.Entity;
 
 @Entity
+@Table(name = "Turf")
 public class Turf {
 
     @Id 
