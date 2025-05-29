@@ -12,6 +12,10 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserRepo repo;
 
+    public void addUser(User u){
+        repo.save(u);
+    }
+
     // @Override
     // public User validate(String email, String password)  {
     //     User u = repo.validate(email,password);
@@ -20,8 +24,5 @@ public class UserServiceImpl implements UserService {
     //     }
     // }
 
-    public void addUser(Turf t){
-        repo.save(t);
-    }
 
 }

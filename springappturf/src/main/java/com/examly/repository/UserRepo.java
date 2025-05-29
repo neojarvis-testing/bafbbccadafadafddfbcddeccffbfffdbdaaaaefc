@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import com.examly.model.User;
 
 @Repository
-public interface UserRepo extends JpaRepository<User, String>{
+public interface UserRepo extends JpaRepository<User, Integer>{
 
     @Query("select u from User u where u.email=:email where u.password=:password")
     public User validate(@Param ("email") String email,@Param("password") String password);
