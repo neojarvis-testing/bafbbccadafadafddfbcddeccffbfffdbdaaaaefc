@@ -11,7 +11,7 @@ public interface BookingService {
     public void addBooking(Booking b);
     public void editBooking(Booking b);
     public void deleteBooking(Long bookingId);
- public Booking getBookingsbyUserId(Long bookingId) throws TurfExceptions;
+ public Booking getBookingsbyBookingId(Long bookingId) throws TurfExceptions;
 
 
 }

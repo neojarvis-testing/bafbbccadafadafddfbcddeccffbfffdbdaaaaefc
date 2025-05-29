@@ -3,6 +3,7 @@ package com.examly.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.examly.ExceptionHandling.TurfExceptions;
 import com.examly.model.Turf;
 import com.examly.model.User;
 import com.examly.repository.UserRepo;
@@ -16,13 +17,17 @@ public class UserServiceImpl implements UserService {
         repo.save(u);
     }
 
-    // @Override
-    // public User validate(String email, String password)  {
-    //     User u = repo.validate(email,password);
-    //     if(u!=null){
-    //         return u;
-    //     }
-    // }
+    @Override
+    public User validate(String email, String password) throws TurfExceptions {
+        User u = repo.validate(email,password);
+        if(u!=null){
+            return u;
+        }
+        else
+        throw new TurfExceptions("invalid Credentials");
+    }
+
+    
 
 
 }
