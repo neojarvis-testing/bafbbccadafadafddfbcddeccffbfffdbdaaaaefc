@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.examly.ExceptionHandling.TurfExceptions;
 import com.examly.model.Booking;
 import com.examly.repository.BookingRepo;
 
@@ -32,12 +33,14 @@ public class BookingServiceImpl implements BookingService{
 
     }
 
-    public List<Booking> getBookingsbyUserId(Long bookingId) throws Exceptions{
+    public Booking getBookingsbyBookingId(Long bookingId) throws TurfExceptions{
         if(repo.existsById(bookingId)){
-            Optional<Booking> o = repo.
-        }
+            Optional<Booking> o = repo.findById(bookingId);
+            Booking b = o.get();
+            return b;
+        } else
+            throw new TurfExceptions("not found");
 
     }
-
 
 }
