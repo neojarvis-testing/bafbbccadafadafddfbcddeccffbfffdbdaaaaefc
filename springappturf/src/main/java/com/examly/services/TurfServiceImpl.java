@@ -1,6 +1,7 @@
 package com.examly.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,13 +25,16 @@ public class TurfServiceImpl implements TurfService{
         repo.save(t);
 
     }
-    public Turf getTurfById(int turfId){
-        if(repo.existsById(turfId))
+    // public Turf getTurfById(int turfId){
+    //     if(repo.existsById(turfId)){
+    //         Optional<Turf> o = repo.findById(turfId);
+    //         Turf t = o.get();
+    //     }
+    
+    // }
 
-
-    }
     public void deleteTurf(int turfId){
-
+        repo.deleteById(turfId);
     }
 
 
