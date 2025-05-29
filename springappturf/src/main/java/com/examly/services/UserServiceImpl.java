@@ -3,6 +3,7 @@ package com.examly.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.examly.model.Turf;
 import com.examly.model.User;
 import com.examly.repository.UserRepo;
 
@@ -19,6 +20,8 @@ public class UserServiceImpl implements UserService {
     //     }
     // }
 
-    public 
+    public void addUser(Turf t){
+        repo.save(t);
+    }
 
 }
