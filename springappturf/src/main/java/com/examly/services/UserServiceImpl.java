@@ -11,12 +11,14 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserRepo repo;
 
-    @Override
-    public User validate(String email, String password) {
-        User u = repo.validate(email,password);
-        if(u!=null){
-            return u;
-        }
-    }
+    // @Override
+    // public User validate(String email, String password)  {
+    //     User u = repo.validate(email,password);
+    //     if(u!=null){
+    //         return u;
+    //     }
+    // }
+
+    public 
 
 }
