@@ -11,5 +11,5 @@ public interface FeedbackService {
     public void addFeedback(Feedback b);
     public void editFeedback(Feedback b);
     public void deleteFeedback(Long feedbackId);
- public Booking getFeedbacksBy(Long bookingId) throws TurfExceptions;
+ public Feedback getFeedbacksByFeedbackId(Long feedbackId) throws TurfExceptions;
 }
