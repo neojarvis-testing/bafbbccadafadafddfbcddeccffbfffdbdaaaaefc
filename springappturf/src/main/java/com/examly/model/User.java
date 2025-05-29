@@ -1,12 +1,20 @@
-package main.java.com.examly.model;
+package com.examly.model;
 
 import java.lang.annotation.Inherited;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 @Entity
+@Table(name = "User")
 public class User {
 
     @Id 
-    @GeneratedValue(strategy = generationType.Identity)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_Id")
     Long userId;
     String email;
