@@ -1,0 +1,10 @@
+package com.examly.ExceptionHandling;
+
+public class Exceptions extends Exception{
+
+    public Exceptions(String str){
+        super(str);
+    }
+    
+
+}
